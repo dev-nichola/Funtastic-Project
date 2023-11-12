@@ -1,4 +1,8 @@
 # Funtastic Project
+## Install Project
+```
+composer create-project nichola/funtastic
+```
 ## Install Composer
 ```
 composer install
