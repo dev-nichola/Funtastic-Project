@@ -33,7 +33,6 @@ class Router
                   $pattern = "|^" . $route['path'] . "$|";
                   if (preg_match($pattern, $path, $variables) && $http == $route['http']) {
 
-                        // call middleware
                         foreach($route['middleware'] as $middleware)
                         {
                               $instance = new $middleware;
@@ -45,7 +44,6 @@ class Router
                            $controller = new $route['controller'];
                       
 
-                        //    $controller->$function();
                         array_shift($variables);
                         call_user_func_array([$controller, $function], $variables);
 
